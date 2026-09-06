@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ListingPage } from "@/components/listing-page";
+export const Route = createFileRoute("/rent")({ validateSearch: (s: Record<string, unknown>) => ({ type: typeof s.type === "string" ? s.type : "", district: typeof s.district === "string" ? s.district : "" }), head:()=>({meta:[{title:"عقارات للإيجار في بريدة | الرشودي"},{name:"description",content:"شقق وفلل ووحدات للإيجار الشهري والسنوي في بريدة."},{property:"og:title",content:"عقارات للإيجار في بريدة"},{property:"og:description",content:"اختر عقارك للإيجار في بريدة."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: Page });
+function Page(){ return <ListingPage purpose="إيجار" initial={Route.useSearch()}/> }
