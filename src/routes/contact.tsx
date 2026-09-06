@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { ContactPage } from "@/components/content-pages";
+export const Route=createFileRoute("/contact")({head:()=>({meta:[{title:"تواصل معنا | الرشودي للعقارات"},{name:"description",content:"تواصل مع فريق الرشودي للعقارات في بريدة."},{property:"og:title",content:"تواصل معنا | الرشودي للعقارات"},{property:"og:description",content:"فريقنا جاهز لمساعدتك في البيع والإيجار."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:ContactPage});

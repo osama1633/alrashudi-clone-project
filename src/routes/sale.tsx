@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ListingPage } from "@/components/listing-page";
+export const Route = createFileRoute("/sale")({ validateSearch: (s: Record<string, unknown>) => ({ type: typeof s.type === "string" ? s.type : "", district: typeof s.district === "string" ? s.district : "" }), head:()=>({meta:[{title:"عقارات للبيع في بريدة | الرشودي"},{name:"description",content:"فلل وأراضٍ وعقارات تجارية للبيع في بريدة."},{property:"og:title",content:"عقارات للبيع في بريدة"},{property:"og:description",content:"اختر عقارك للبيع في بريدة."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: Page });
+function Page(){ return <ListingPage purpose="بيع" initial={Route.useSearch()}/> }

@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { SubmitPage } from "@/components/content-pages";
+export const Route=createFileRoute("/submit")({head:()=>({meta:[{title:"اعرض عقارك | الرشودي للعقارات"},{name:"description",content:"أرسل بيانات عقارك لتسويقه مع الرشودي للعقارات."},{property:"og:title",content:"اعرض عقارك | الرشودي"},{property:"og:description",content:"ابدأ تسويق عقارك بخطوات سهلة وواضحة."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:SubmitPage});

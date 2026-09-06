@@ -1,0 +1,2 @@
+import { createFileRoute } from "@tanstack/react-router"; import { AboutPage } from "@/components/content-pages";
+export const Route=createFileRoute("/about")({head:()=>({meta:[{title:"من نحن | الرشودي للعقارات"},{name:"description",content:"تعرف على خبرة الرشودي للعقارات في سوق بريدة."},{property:"og:title",content:"من نحن | الرشودي للعقارات"},{property:"og:description",content:"خبرة محلية تصنع فرقاً في قرارك العقاري."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:AboutPage});
